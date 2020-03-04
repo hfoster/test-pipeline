@@ -17,7 +17,7 @@ pipeline {
       steps {
         container('docker') {  
           sh "docker build -t hafoster/promo-app:dev ."  // when we run docker in this step, we're running it via a shell on the docker build-pod container, 
-          sh "docker push hafoster/promo-app:dev"        // which is just connecting to the host docker deaemon
+          sh "docker push https://hub.docker.com/r/hafoster/promo-app:dev"        // which is just connecting to the host docker deaemon
         }
       }
     }
